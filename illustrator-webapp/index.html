@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrator Web App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Illustrator Web App</h1>
+            <nav>
+                <button id="tool-select">Select</button>
+                <button id="tool-pen">Pen</button>
+                <button id="tool-shape">Shape</button>
+                <button id="tool-text">Text</button>
+                <button id="tool-color">Color</button>
+            </nav>
+        </header>
+        
+        <main>
+            <div id="canvas-container">
+                <canvas id="drawing-canvas"></canvas>
+            </div>
+        </main>
+        
+        <aside id="toolbar">
+            <div class="tool-section">
+                <h3>Tools</h3>
+                <div class="tool-buttons">
+                    <button class="tool-btn active" data-tool="select">Select</button>
+                    <button class="tool-btn" data-tool="pen">Pen</button>
+                    <button class="tool-btn" data-tool="rectangle">Rectangle</button>
+                    <button class="tool-btn" data-tool="circle">Circle</button>
+                    <button class="tool-btn" data-tool="line">Line</button>
+                </div>
+            </div>
+            
+            <div class="tool-section">
+                <h3>Colors</h3>
+                <input type="color" id="stroke-color" value="#000000">
+                <input type="color" id="fill-color" value="#ffffff">
+                <label>Stroke Width: <input type="range" id="stroke-width" min="1" max="20" value="2"></label>
+            </div>
+            
+            <div class="tool-section">
+                <h3>Layers</h3>
+                <div id="layers-panel">
+                    <div class="layer-item active">Layer 1</div>
+                </div>
+                <button id="add-layer">Add Layer</button>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
